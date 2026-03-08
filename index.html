@@ -235,6 +235,21 @@
 
                 <script>
                 (function() {
+                    // ── Theme colour map ─────────────────────────────────────────
+                    // Each entry: [primaryRGB, lightRGB, bgR, bgG, bgB]
+                    const THEME_COLORS = {
+                        dark:     { primary:'59,130,246',  light:'147,197,253', deep:'30,58,138',  bg:'15,23,42'    },
+                        light:    { primary:'37,99,235',   light:'96,165,250',  deep:'29,78,216',  bg:'219,234,254' },
+                        ocean:    { primary:'6,182,212',   light:'103,232,249', deep:'14,116,144', bg:'8,47,73'     },
+                        warm:     { primary:'234,88,12',   light:'251,146,60',  deep:'154,52,18',  bg:'67,20,7'     },
+                        midnight: { primary:'139,92,246',  light:'196,181,253', deep:'76,29,149',  bg:'15,10,40'    },
+                    };
+
+                    function getThemeColors() {
+                        const t = document.documentElement.getAttribute('data-theme') || 'dark';
+                        return THEME_COLORS[t] || THEME_COLORS.dark;
+                    }
+
                     const canvas = document.getElementById('neuralCanvas');
                     const ctx = canvas.getContext('2d');
 
@@ -242,11 +257,11 @@
                         const rect = canvas.parentElement.getBoundingClientRect();
                         canvas.width  = rect.width  || 480;
                         canvas.height = rect.height || 480;
+                        buildNodes();
                     }
                     resize();
                     window.addEventListener('resize', resize);
 
-                    // Node layers: input → hidden1 → hidden2 → output
                     const layers = [4, 6, 6, 4];
                     let nodes = [];
                     let pulses = [];
@@ -259,18 +274,16 @@
                             const x = w * layerXPositions[li];
                             for (let ni = 0; ni < count; ni++) {
                                 const y = h * (0.2 + 0.6 * (ni / (count - 1 || 1)));
-                                nodes.push({ x, y, layer: li, idx: ni, glow: Math.random() });
+                                nodes.push({ x, y, layer: li, idx: ni, glow: Math.random() * Math.PI * 2 });
                             }
                         });
                     }
-                    buildNodes();
 
                     function getLayerNodes(li) {
                         return nodes.filter(n => n.layer === li);
                     }
 
                     function spawnPulse() {
-                        // pick random connection
                         const li = Math.floor(Math.random() * (layers.length - 1));
                         const from = getLayerNodes(li);
                         const to   = getLayerNodes(li + 1);
@@ -279,21 +292,62 @@
                         pulses.push({ sx: src.x, sy: src.y, ex: dst.x, ey: dst.y, t: 0, speed: 0.008 + Math.random() * 0.006 });
                     }
 
-                    // Spawn pulses periodically
                     setInterval(spawnPulse, 180);
+
+                    // ── Also update orb + metric card + badge colours on theme change ──
+                    function applyThemeToUI() {
+                        const c = getThemeColors();
+                        const [r, g, b] = c.primary.split(',');
+
+                        // Orb
+                        const orb = document.querySelector('.orb-core');
+                        if (orb) {
+                            orb.style.background = `radial-gradient(circle at 35% 35%, rgb(${c.light}), rgb(${c.deep}))`;
+                            orb.style.boxShadow  = `0 0 0 12px rgba(${c.primary},0.1), 0 0 0 24px rgba(${c.primary},0.05), 0 0 40px rgba(${c.primary},0.4)`;
+                        }
+
+                        // Metric values
+                        document.querySelectorAll('.metric-val').forEach(el => {
+                            el.style.color = `rgb(${c.light})`;
+                        });
+
+                        // Metric card borders
+                        document.querySelectorAll('.metric-card').forEach(el => {
+                            el.style.borderColor = `rgba(${c.primary},0.35)`;
+                        });
+
+                        // Badges
+                        document.querySelectorAll('.ai-badge').forEach(el => {
+                            el.style.borderColor = `rgba(${c.primary},0.35)`;
+                            el.style.background  = `rgba(${c.primary},0.1)`;
+                        });
+
+                        // Update orb keyframe glow dynamically via CSS variable
+                        document.documentElement.style.setProperty('--anim-primary', c.primary);
+                    }
+
+                    // Watch for theme attribute changes
+                    const observer = new MutationObserver(applyThemeToUI);
+                    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+                    // Apply on load
+                    document.addEventListener('DOMContentLoaded', applyThemeToUI);
+                    setTimeout(applyThemeToUI, 100); // fallback
 
                     function draw() {
                         const w = canvas.width, h = canvas.height;
+                        const c = getThemeColors();
+
                         ctx.clearRect(0, 0, w, h);
 
-                        // Background gradient
+                        // Background glow
                         const bg = ctx.createRadialGradient(w/2, h/2, 0, w/2, h/2, w * 0.7);
-                        bg.addColorStop(0, 'rgba(30,58,138,0.18)');
-                        bg.addColorStop(1, 'rgba(15,23,42,0.0)');
+                        bg.addColorStop(0, `rgba(${c.deep},0.25)`);
+                        bg.addColorStop(1, `rgba(${c.bg},0.0)`);
                         ctx.fillStyle = bg;
                         ctx.fillRect(0, 0, w, h);
 
-                        // Draw edges between adjacent layers
+                        // Edges
                         for (let li = 0; li < layers.length - 1; li++) {
                             const from = getLayerNodes(li);
                             const to   = getLayerNodes(li + 1);
@@ -302,14 +356,14 @@
                                     ctx.beginPath();
                                     ctx.moveTo(src.x, src.y);
                                     ctx.lineTo(dst.x, dst.y);
-                                    ctx.strokeStyle = 'rgba(59,130,246,0.10)';
+                                    ctx.strokeStyle = `rgba(${c.primary},0.10)`;
                                     ctx.lineWidth = 0.8;
                                     ctx.stroke();
                                 });
                             });
                         }
 
-                        // Draw pulses along edges
+                        // Pulses
                         pulses = pulses.filter(p => p.t <= 1);
                         pulses.forEach(p => {
                             p.t += p.speed;
@@ -317,10 +371,9 @@
                             const py = p.sy + (p.ey - p.sy) * p.t;
                             const alpha = Math.sin(p.t * Math.PI);
 
-                            // Trail
                             const grad = ctx.createLinearGradient(p.sx, p.sy, px, py);
-                            grad.addColorStop(0, `rgba(59,130,246,0)`);
-                            grad.addColorStop(1, `rgba(99,179,255,${alpha * 0.6})`);
+                            grad.addColorStop(0, `rgba(${c.primary},0)`);
+                            grad.addColorStop(1, `rgba(${c.light},${alpha * 0.7})`);
                             ctx.beginPath();
                             ctx.moveTo(p.sx, p.sy);
                             ctx.lineTo(px, py);
@@ -328,32 +381,29 @@
                             ctx.lineWidth = 1.5;
                             ctx.stroke();
 
-                            // Glow dot
                             const dot = ctx.createRadialGradient(px, py, 0, px, py, 5);
-                            dot.addColorStop(0, `rgba(147,197,253,${alpha})`);
-                            dot.addColorStop(1, 'rgba(59,130,246,0)');
+                            dot.addColorStop(0, `rgba(${c.light},${alpha})`);
+                            dot.addColorStop(1, `rgba(${c.primary},0)`);
                             ctx.beginPath();
                             ctx.arc(px, py, 5, 0, Math.PI * 2);
                             ctx.fillStyle = dot;
                             ctx.fill();
                         });
 
-                        // Draw nodes
+                        // Nodes
                         nodes.forEach(n => {
                             n.glow += 0.02;
                             const glow = 0.5 + 0.5 * Math.sin(n.glow);
 
-                            // Outer ring
                             ctx.beginPath();
                             ctx.arc(n.x, n.y, 10, 0, Math.PI * 2);
-                            ctx.strokeStyle = `rgba(59,130,246,${0.2 + 0.3 * glow})`;
+                            ctx.strokeStyle = `rgba(${c.primary},${0.2 + 0.3 * glow})`;
                             ctx.lineWidth = 1;
                             ctx.stroke();
 
-                            // Inner fill
                             const ng = ctx.createRadialGradient(n.x - 2, n.y - 2, 0, n.x, n.y, 7);
-                            ng.addColorStop(0, `rgba(147,197,253,${0.7 + 0.3 * glow})`);
-                            ng.addColorStop(1, `rgba(30,58,138,${0.8})`);
+                            ng.addColorStop(0, `rgba(${c.light},${0.7 + 0.3 * glow})`);
+                            ng.addColorStop(1, `rgba(${c.deep},0.9)`);
                             ctx.beginPath();
                             ctx.arc(n.x, n.y, 7, 0, Math.PI * 2);
                             ctx.fillStyle = ng;
