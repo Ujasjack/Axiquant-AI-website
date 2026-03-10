@@ -235,7 +235,7 @@
 
   <div class="domain-bar">
     <label>Industry Domain:</label>
-    <select id="domain-select" onchange="updateSuggestions(this.value)">
+    <select id="domain-select" onchange="changeDomain(this.value)">
       <option value="retail">🛒 Retail</option>
       <option value="pharma">💊 Pharma</option>
       <option value="manufacturing">🏭 Manufacturing</option>
@@ -243,6 +243,21 @@
       <option value="automotive">🚗 Automotive</option>
       <option value="energy">⚡ Energy</option>
     </select>
+    <button id="clear-btn" onclick="clearChat()" style="
+        margin-left: auto;
+        background: transparent;
+        border: 1px solid rgba(239,68,68,0.4);
+        color: rgba(239,68,68,0.8);
+        padding: 6px 14px;
+        border-radius: 6px;
+        font-size: 12px;
+        cursor: pointer;
+        transition: all 0.2s;
+    " onmouseover="this.style.background='rgba(239,68,68,0.1)'"
+       onmouseout="this.style.background='transparent'">
+        🗑️ Clear Chat
+    </button>
+</div>
   </div>
 
   <div id="messages">
@@ -468,6 +483,24 @@
   document.addEventListener('DOMContentLoaded', function() {
     updateSuggestions('retail');
   });
+  function clearChat() {
+    const messages = document.getElementById('messages');
+    // Remove all messages but keep the welcome screen
+    messages.innerHTML = `
+        <div class="welcome" id="welcome">
+            <h2>Welcome to AxiQuant AI</h2>
+            <p>Your enterprise AI assistant. Ask anything about your business.</p>
+            <div class="suggestions" id="suggestions-container"></div>
+        </div>`;
+    // Re-populate suggestions for current domain
+    const domain = document.getElementById('domain-select').value;
+    updateSuggestions(domain);
+}
+
+function changeDomain(domain) {
+    updateSuggestions(domain);  // update suggestion buttons
+    clearChat();                // wipe chat history
+}
 </script>
 </body>
 </html>
