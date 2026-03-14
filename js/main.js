@@ -722,6 +722,29 @@ document.addEventListener('DOMContentLoaded', function() {
   
   console.log('✅ Theme switcher initialized');
 });
+// ── Live Demos Dropdown ──────────────────────────────
+(function() {
+    const toggle   = document.getElementById('demos-toggle');
+    const dropdown = document.getElementById('demos-dropdown');
+
+    if (!toggle || !dropdown) return;
+
+    // Toggle on button click
+    toggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        dropdown.classList.toggle('open');
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', function() {
+        dropdown.classList.remove('open');
+    });
+
+    // Prevent closing when clicking inside dropdown
+    dropdown.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+})();
 
 // ========================================
 // Console Welcome Message
