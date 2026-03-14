@@ -2564,3 +2564,25 @@ body.menu-open {
     text-align: center !important;
     display: block !important;
 }
+/* LogiChain Blockchain Button */
+.btn-blockchain {
+    background: linear-gradient(135deg, #10b981, #059669) !important;
+    color: white !important;
+    padding: 8px 18px !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    transition: all 0.3s ease !important;
+    border: none !important;
+    animation: glowGreen 2s infinite;
+}
+
+.btn-blockchain:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 20px rgba(16,185,129,0.5) !important;
+}
+
+@keyframes glowGreen {
+    0%, 100% { box-shadow: 0 0 8px rgba(16,185,129,0.3); }
+    50%       { box-shadow: 0 0 16px rgba(16,185,129,0.6); }
+}
