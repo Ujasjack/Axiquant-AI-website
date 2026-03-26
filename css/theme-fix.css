@@ -1,0 +1,193 @@
+/* ================================================================
+   theme-fix.css — AxiQuant AI
+   Add this to EVERY page: about.html, services.html,
+   careers.html, contact.html, ai-agent.html
+   
+   Link it AFTER pages.css:
+   <link rel="stylesheet" href="css/theme-fix.css">
+   ================================================================ */
+
+/* ── DARK THEME ── */
+html[data-theme="dark"] {
+  --primary-navy:    #0d1b2e;
+  --primary-gold:    #e8a87c;
+  --accent-blue:     #4f8ef7;
+  --accent-teal:     #2dd4bf;
+  --text-primary:    #eaf1ff;
+  --text-secondary:  #7ea3cc;
+  --text-tertiary:   #3d5a7a;
+  --bg-primary:      #070d18;
+  --bg-secondary:    #0d1421;
+  --bg-card:         rgba(11,20,38,0.85);
+  --border-color:    rgba(79,142,247,0.18);
+  --border-hover:    rgba(79,142,247,0.42);
+  --shadow-glow:     0 0 32px rgba(79,142,247,0.18);
+  --shadow-card:     0 8px 32px rgba(0,0,0,0.45);
+}
+
+/* ── LIGHT THEME ── */
+html[data-theme="light"] {
+  --primary-navy:    #1e3a8a;
+  --primary-gold:    #b45309;
+  --accent-blue:     #1d4ed8;
+  --accent-teal:     #0891b2;
+  --text-primary:    #0a1628;
+  --text-secondary:  #1e3a6e;
+  --text-tertiary:   #4a6a9a;
+  --bg-primary:      #eef3ff;
+  --bg-secondary:    #e2eaff;
+  --bg-card:         rgba(255,255,255,0.92);
+  --border-color:    rgba(29,78,216,0.18);
+  --border-hover:    rgba(29,78,216,0.45);
+  --shadow-glow:     0 0 32px rgba(29,78,216,0.14);
+  --shadow-card:     0 8px 32px rgba(29,78,216,0.10);
+}
+
+/* ── Base ── */
+body {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  transition: background-color 0.35s, color 0.35s;
+}
+
+/* ================================================================
+   HEADER — fixed background + blur for all pages
+================================================================ */
+header {
+  backdrop-filter: blur(20px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(160%) !important;
+  transition: background 0.35s, border-color 0.35s;
+}
+html[data-theme="dark"]  header {
+  background: rgba(7,13,24,0.92) !important;
+  border-bottom: 1px solid rgba(79,142,247,0.18) !important;
+}
+html[data-theme="light"] header {
+  background: rgba(238,243,255,0.95) !important;
+  border-bottom: 1px solid rgba(29,78,216,0.20) !important;
+}
+
+/* ================================================================
+   NAV LINKS — clearly visible in BOTH themes on ALL pages
+================================================================ */
+.nav-link,
+.navbar .nav-link,
+.nav-menu .nav-link,
+.nav-menu a {
+  transition: color 0.2s, background 0.2s !important;
+}
+html[data-theme="dark"]  .nav-link,
+html[data-theme="dark"]  .nav-menu a { color: #b8d0ef !important; }
+html[data-theme="light"] .nav-link,
+html[data-theme="light"] .nav-menu a { color: #0a1628 !important; }
+
+html[data-theme="dark"]  .nav-link:hover { color: #ffffff !important; background: rgba(79,142,247,0.12) !important; border-radius: 7px; }
+html[data-theme="light"] .nav-link:hover { color: #1d4ed8 !important; background: rgba(29,78,216,0.10) !important; border-radius: 7px; }
+
+/* Get Started button — always white text */
+.nav-link.btn-nav, a.btn-nav {
+  background: var(--accent-blue) !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+}
+
+/* Live Demos button */
+.btn-demos {
+  background: none !important;
+  border: none !important;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.875rem;
+  border-radius: 8px;
+  transition: color 0.2s, background 0.2s;
+}
+html[data-theme="dark"]  .btn-demos { color: #b8d0ef !important; }
+html[data-theme="light"] .btn-demos { color: #0a1628 !important; }
+html[data-theme="dark"]  .btn-demos:hover { color: #fff !important; background: rgba(79,142,247,0.12) !important; }
+html[data-theme="light"] .btn-demos:hover { color: #1d4ed8 !important; background: rgba(29,78,216,0.10) !important; }
+
+/* Mobile nav links */
+.mobile-nav-link {
+  display: block; padding: 0.6rem 0.875rem; border-radius: 8px;
+  text-decoration: none; font-weight: 500;
+  transition: color 0.2s, background 0.2s;
+}
+html[data-theme="dark"]  .mobile-nav-link { color: #b8d0ef !important; }
+html[data-theme="light"] .mobile-nav-link { color: #0a1628 !important; }
+.mobile-nav-link.btn-primary {
+  background: var(--accent-blue) !important;
+  color: #fff !important;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+/* ================================================================
+   THEME TOGGLE — hide extra options, fix dots
+================================================================ */
+.theme-option[data-theme="ocean"],
+.theme-option[data-theme="warm"],
+.theme-option[data-theme="midnight"] { display: none !important; }
+.dot.ocean, .dot.warm, .dot.midnight { display: none !important; }
+.dot.dark  { background: #4f8ef7 !important; }
+.dot.light { background: #1d4ed8 !important; }
+.theme-option { color: var(--text-primary) !important; }
+
+/* ================================================================
+   DROPDOWN PANELS
+================================================================ */
+.nav-dropdown {
+  transition: background 0.35s, border-color 0.35s;
+}
+html[data-theme="dark"]  .nav-dropdown {
+  background: rgba(11,20,38,0.97) !important;
+  border-color: rgba(79,142,247,0.22) !important;
+}
+html[data-theme="light"] .nav-dropdown {
+  background: rgba(255,255,255,0.99) !important;
+  border-color: rgba(29,78,216,0.20) !important;
+}
+.dropdown-title { color: var(--text-primary) !important; }
+.dropdown-desc  { color: var(--text-secondary) !important; }
+
+/* ================================================================
+   GENERAL CONTENT — cards, text, footer for all pages
+================================================================ */
+.card, .service-card, .stat-box, .team-card, .value-card,
+.timeline-item, .benefit-card, .job-card {
+  background: var(--bg-card) !important;
+  border-color: var(--border-color) !important;
+  transition: border-color 0.25s, box-shadow 0.25s, background 0.35s;
+}
+.card:hover, .service-card:hover, .stat-box:hover {
+  border-color: var(--border-hover) !important;
+  box-shadow: var(--shadow-glow) !important;
+}
+
+h1, h2, h3, h4, h5, h6 { color: var(--text-primary) !important; }
+p, li { color: var(--text-secondary) !important; }
+.text-secondary { color: var(--text-secondary) !important; }
+.text-tertiary  { color: var(--text-tertiary)  !important; }
+.stat-number    { color: var(--accent-blue)     !important; }
+
+/* "Engineered Intelligence" gradient — rose gold dark, blue light */
+.text-gradient {
+  background: linear-gradient(120deg,#e8a87c 0%,#f5c897 40%,#e8a87c 70%,#c97b4b 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+html[data-theme="light"] .text-gradient {
+  background: linear-gradient(120deg,#1d4ed8 0%,#0891b2 50%,#1d4ed8 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+
+footer {
+  background: var(--bg-secondary) !important;
+  border-top: 1px solid var(--border-color) !important;
+}
+.footer-title { color: var(--text-primary)   !important; }
+.footer-links a { color: var(--text-secondary) !important; }
+.footer-links a:hover { color: var(--accent-blue) !important; }
+.footer-bottom p, .footer-bottom a { color: var(--text-tertiary) !important; }
+.footer-bottom a:hover { color: var(--accent-blue) !important; }
