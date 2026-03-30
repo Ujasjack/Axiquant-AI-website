@@ -1,408 +1,492 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Comprehensive AI/ML, Data Engineering, Blockchain, Generative AI, Analytics, and Visualization services. Custom solutions for businesses in India and globally.">
-    <meta name="keywords" content="AI services, Machine Learning consulting, Data Engineering services, Blockchain development, Generative AI solutions, Data Analytics, ETL pipeline, ML model development">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://axiquantai.com/services.html">
-    
-    <meta property="og:title" content="AI & Data Engineering Services - AxiQuant AI">
-    <meta property="og:description" content="Expert AI/ML, Data Engineering, Blockchain, and Analytics services to transform your business.">
-    <meta property="og:url" content="https://axiquantai.com/services.html">
-    <title>Our Services - AxiQuant AI</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
-    <meta name="theme-color" content="#0a0e1a">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/pages.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AxiQuant AI services: AI & ML, Data Engineering, Blockchain, Generative AI, Data Visualization, and Agentic AI Platform.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://axiquantai.com/services">
+<meta property="og:title" content="AI & Data Engineering Services - AxiQuant AI">
+<meta property="og:url" content="https://axiquantai.com/services">
+<title>Our Services - AxiQuant AI</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/theme-fix.css">
+<script>(function(){var t=localStorage.getItem('axq-theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
+<style>
+html[data-theme="dark"]{--bg:#080d1a;--bg2:#0c1228;--bg3:#101830;--surface:rgba(255,255,255,0.04);--surface2:rgba(255,255,255,0.07);--border:rgba(255,255,255,0.07);--border2:rgba(201,149,106,0.28);--t1:#eef2ff;--t2:#8899bb;--t3:#445577;--blue:#2a5bd7;--blue2:#4a7af5;--gold:#c9956a;--gold2:#e8c49a;--gold3:rgba(201,149,106,0.12);--grad:linear-gradient(135deg,#2a5bd7,#c9956a);--nav-bg:rgba(8,13,26,0.90);--shadow:0 20px 60px rgba(0,0,0,0.5);--glow-blue:rgba(42,91,215,0.20);--glow-gold:rgba(201,149,106,0.15);}
+html[data-theme="light"]{--bg:#f4f6fb;--bg2:#eaecf5;--bg3:#e0e4f0;--surface:rgba(255,255,255,0.85);--surface2:rgba(255,255,255,0.98);--border:rgba(26,45,107,0.10);--border2:rgba(201,149,106,0.35);--t1:#0d1733;--t2:#334477;--t3:#8899bb;--blue:#1a2d6b;--blue2:#2a5bd7;--gold:#b07840;--gold2:#c9956a;--gold3:rgba(201,149,106,0.10);--grad:linear-gradient(135deg,#1a2d6b,#c9956a);--nav-bg:rgba(244,246,251,0.93);--shadow:0 20px 60px rgba(26,45,107,0.10);--glow-blue:rgba(26,45,107,0.12);--glow-gold:rgba(201,149,106,0.12);}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Outfit',system-ui,sans-serif!important;background:var(--bg)!important;color:var(--t1)!important;overflow-x:hidden;transition:background .4s,color .4s;-webkit-font-smoothing:antialiased;line-height:1.7;}
+h1,h2,h3,h4{font-family:'Outfit',sans-serif;color:var(--t1)!important;letter-spacing:-.02em;line-height:1.2;}
+h1{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800;}
+h2{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;}
+h3{font-size:1.25rem;font-weight:700;}
+h4{font-size:.95rem;font-weight:600;}
+p{color:var(--t2)!important;line-height:1.8;}
+a{text-decoration:none;color:inherit;}
+.wrap{max-width:1200px;margin:0 auto;padding:0 2rem;}
+.section{padding:5rem 0;}
+.t-center{text-align:center;}
+.gt{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+
+/* NAV — identical to about.html */
+header{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--nav-bg)!important;border-bottom:1px solid var(--border)!important;backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);transition:background .4s,border-color .4s;}
+.navbar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 2rem;max-width:1200px;margin:0 auto;}
+.logo-a{display:flex;align-items:center;}
+.logo-a img{height:38px;width:auto;}
+.nav-ul{display:flex;align-items:center;gap:.2rem;list-style:none;}
+.nav-ul a,.nav-ul button{display:inline-flex;align-items:center;gap:.3rem;padding:.45rem .9rem;border-radius:8px;font-size:.88rem;font-weight:500;font-family:'Outfit',sans-serif;color:var(--t2)!important;background:none;border:none;cursor:pointer;transition:color .2s,background .2s;}
+.nav-ul a:hover,.nav-ul button:hover{color:var(--t1)!important;background:var(--surface);}
+.nav-cta-btn{background:var(--blue)!important;color:#fff!important;border-radius:8px!important;padding:.5rem 1.25rem!important;font-weight:600!important;transition:background .2s,transform .15s!important;}
+.nav-cta-btn:hover{background:var(--blue2)!important;transform:translateY(-1px);}
+.dd-wrap{position:relative;}
+.dd-panel{display:none;position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);min-width:230px;background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:.5rem;box-shadow:var(--shadow);z-index:999;backdrop-filter:blur(20px);}
+.dd-panel.open{display:block;}
+.dd-a{display:flex;align-items:center;gap:.75rem;padding:.7rem .9rem;border-radius:9px;transition:background .15s;color:var(--t1)!important;}
+.dd-a:hover{background:var(--surface);}
+.dd-icon-box{width:34px;height:34px;border-radius:9px;background:var(--gold3);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.dd-icon-box svg{width:15px;height:15px;color:var(--gold);}
+.dd-t{font-weight:600;font-size:.85rem;color:var(--t1)!important;}.dd-d{font-size:.73rem;color:var(--t3)!important;}
+.theme-wrap{position:relative;}
+.t-btn{display:flex;align-items:center;gap:.45rem;padding:.45rem .8rem;border-radius:9px;border:1px solid var(--border);background:var(--surface);color:var(--t2);cursor:pointer;font-family:'Outfit',sans-serif;font-size:.82rem;font-weight:500;transition:border-color .2s,background .2s;}
+.t-btn:hover{border-color:var(--border2);background:var(--surface2);}
+.t-btn svg{width:14px;height:14px;}
+.mob-btn{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+.mob-btn span{display:block;width:22px;height:2px;background:var(--t1);border-radius:2px;}
+.mob-menu{display:none;padding:1rem 2rem 1.5rem;border-top:1px solid var(--border);}
+.mob-menu.open{display:block;}
+.mob-ul{list-style:none;display:flex;flex-direction:column;gap:.2rem;}
+.mob-ul a{display:block;padding:.62rem .9rem;border-radius:8px;color:var(--t2)!important;font-weight:500;transition:color .2s,background .2s;}
+.mob-ul a:hover{color:var(--t1)!important;background:var(--surface);}
+.mob-cta{background:var(--blue)!important;color:#fff!important;text-align:center;font-weight:600;margin-top:.5rem;border-radius:8px;}
+
+/* PAGE HERO */
+.page-hero{padding:9rem 0 5rem;text-align:center;position:relative;}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,var(--glow-blue) 0%,transparent 65%);pointer-events:none;}
+.page-hero>*{position:relative;}
+.page-hero p{font-size:1.05rem;max-width:580px;margin:.9rem auto 0;}
+
+/* LABELS */
+.s-label{display:inline-flex;align-items:center;gap:.5rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);background:var(--gold3);border:1px solid var(--border2);padding:.32rem .9rem;border-radius:100px;margin-bottom:1.2rem;}
+.s-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);animation:dp 2s infinite;}
+@keyframes dp{0%,100%{opacity:1}50%{opacity:.3}}
+.divider{width:3rem;height:3px;background:var(--grad);border-radius:4px;margin:.75rem auto 0;}
+
+/* BUTTONS */
+.btn-primary{display:inline-flex;align-items:center;gap:.5rem;padding:.82rem 2rem;border-radius:10px;font-weight:700;font-size:.95rem;background:var(--blue);color:#fff;border:none;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s;font-family:'Outfit',sans-serif;}
+.btn-primary:hover{background:var(--blue2);transform:translateY(-2px);box-shadow:0 8px 28px var(--glow-blue);}
+.btn-outline{display:inline-flex;align-items:center;gap:.5rem;padding:.82rem 2rem;border-radius:10px;font-weight:600;font-size:.95rem;background:transparent;color:var(--t1);border:1px solid var(--border2);cursor:pointer;transition:background .2s,transform .2s;font-family:'Outfit',sans-serif;}
+.btn-outline:hover{background:var(--gold3);border-color:var(--gold);transform:translateY(-2px);}
+
+/* SERVICE DETAIL BLOCKS */
+.svc-block{padding:4rem 0;border-bottom:1px solid var(--border);}
+.svc-block:last-child{border-bottom:none;}
+.svc-block-header{display:flex;align-items:flex-start;gap:1.5rem;margin-bottom:2rem;}
+.svc-block-ico{width:56px;height:56px;border-radius:14px;background:var(--gold3);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.svc-block-ico svg{width:24px;height:24px;color:var(--gold);}
+.svc-block-title h2{margin-bottom:.4rem;}
+.svc-block-title p{font-size:.9375rem;}
+
+.svc-content-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:1.5rem;}
+.svc-desc-block{font-size:.9375rem;line-height:1.82;}
+.svc-features-block{}
+.feature-list{list-style:none;display:flex;flex-direction:column;gap:.6rem;}
+.feature-list li{display:flex;align-items:flex-start;gap:.6rem;font-size:.875rem;color:var(--t2)!important;}
+.feature-list li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:.55rem;}
+
+/* Sub-service accordion cards */
+.sub-services{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem;margin-top:2rem;}
+.sub-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;transition:border-color .25s,background .25s,transform .25s;}
+.sub-card:hover{border-color:var(--border2);background:var(--surface2);transform:translateY(-3px);}
+.sub-card h4{font-size:.9rem;margin-bottom:.4rem;}
+.sub-card p{font-size:.8rem;}
+
+/* Live demo badge */
+.demo-badge{display:inline-flex;align-items:center;gap:.6rem;padding:.5rem 1rem;border-radius:8px;background:var(--gold3);border:1px solid var(--border2);font-size:.85rem;font-weight:600;color:var(--gold)!important;margin-top:1.5rem;transition:background .2s;}
+.demo-badge:hover{background:rgba(201,149,106,0.22);}
+.demo-badge svg{width:14px;height:14px;}
+
+/* CTA band */
+.cta-band{background:var(--bg2);border-top:1px solid var(--border);padding:5rem 0;text-align:center;position:relative;overflow:hidden;}
+.cta-band::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 100%,var(--glow-blue) 0%,transparent 65%);pointer-events:none;}
+.cta-band>*{position:relative;}
+
+/* FOOTER */
+footer{background:var(--bg2)!important;border-top:1px solid var(--border)!important;padding:4.5rem 0 2rem;}
+.footer-g{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:3rem;margin-bottom:3rem;}
+.footer-logo img{height:34px;width:auto;display:block;margin-bottom:.75rem;}
+.footer-tag{font-size:.85rem;font-weight:600;color:var(--gold)!important;margin-bottom:.5rem;}
+.footer-desc{font-size:.84rem;color:var(--t3)!important;line-height:1.75;margin-bottom:1.5rem;}
+.footer-h{font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--t3)!important;margin-bottom:.9rem;}
+.footer-ul{list-style:none;display:flex;flex-direction:column;gap:.5rem;}
+.footer-ul a{font-size:.875rem;color:var(--t2)!important;transition:color .2s;}
+.footer-ul a:hover{color:var(--gold)!important;}
+.footer-addr{font-size:.875rem;color:var(--t2)!important;line-height:1.8;font-style:normal;margin-bottom:1.25rem;}
+.footer-addr a{color:var(--t2)!important;transition:color .2s;}
+.footer-addr a:hover{color:var(--gold)!important;}
+.soc-a{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:var(--surface);border:1px solid var(--border);color:var(--t2);transition:background .2s,color .2s,border-color .2s;}
+.soc-a:hover{background:var(--gold);color:#fff;border-color:var(--gold);}
+.soc-a svg{width:14px;height:14px;}
+.footer-bot{border-top:1px solid var(--border);padding-top:1.75rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.footer-copy{font-size:.78rem;color:var(--t3)!important;}
+.footer-leg{display:flex;gap:1.25rem;}
+.footer-leg a{font-size:.78rem;color:var(--t3)!important;transition:color .2s;}
+.footer-leg a:hover{color:var(--gold)!important;}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}
+
+@media(max-width:768px){
+  .nav-ul{display:none;}.mob-btn{display:flex;}
+  .navbar{padding:.85rem 1.25rem;}.wrap{padding:0 1.25rem;}
+  .section{padding:3rem 0;}.page-hero{padding:7rem 0 3rem;}
+  .svc-content-grid{grid-template-columns:1fr;}
+  .svc-block-header{flex-direction:column;gap:1rem;}
+  .footer-g{grid-template-columns:1fr;}
+  .footer-bot{flex-direction:column;text-align:center;}
+}
+</style>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    <header role="banner">
-        <nav class="navbar container" role="navigation" aria-label="Main navigation">
-            <a href="index.html" class="logo"><span class="text-gradient">AXI</span>QUANT<span class="logo-ai">AI</span></a>
-            <ul class="nav-menu" role="menubar">
-                <li role="none"><a href="index.html" class="nav-link" role="menuitem" aria-current="page">Home</a></li>
-                <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
-                <li role="none"><a href="services.html" class="nav-link" role="menuitem">Services</a></li>
-                <li role="none"><a href="careers.html" class="nav-link" role="menuitem">Careers</a></li>
-                <li role="none" class="nav-dropdown-wrapper">
-                    <button class="nav-link btn-demos" id="demos-toggle">
-                        🚀 Live Demos ▾
-                    </button>
-                    <div class="nav-dropdown" id="demos-dropdown">
-                        <a href="ai-agent.html" target="_blank" class="dropdown-item">
-                            <span class="dropdown-icon">🤖</span>
-                            <div>
-                                <div class="dropdown-title">AI Agent</div>
-                                <div class="dropdown-desc">Enterprise AI Assistant</div>
-                            </div>
-                        </a>
-                        <a href="https://logichain.axiquantai.com" target="_blank" class="dropdown-item">
-                            <span class="dropdown-icon">⛓️</span>
-                            <div>
-                                <div class="dropdown-title">LogiChain</div>
-                                <div class="dropdown-desc">Blockchain Supply Chain</div>
-                            </div>
-                        </a>
-                    </div>
-                </li>
-                <li role="none"><a href="contact.html" class="nav-link btn-nav" role="menuitem">Get Started</a></li>              
+<a href="#main-content" style="position:absolute;top:-60px;left:1rem;background:var(--blue);color:#fff;padding:.5rem 1rem;border-radius:6px;z-index:9999;text-decoration:none;" onfocus="this.style.top='.5rem'" onblur="this.style.top='-60px'">Skip to main content</a>
+
+<header role="banner">
+  <nav class="navbar" aria-label="Main navigation">
+    <a href="index.html" class="logo-a"><img src="logo.png" alt="AxiQuant AI"></a>
+    <ul class="nav-ul" role="menubar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html" aria-current="page" style="color:var(--gold)!important;font-weight:600;">Services</a></li>
+      <li><a href="careers.html">Careers</a></li>
+      <li class="dd-wrap">
+        <button id="demos-btn" aria-expanded="false">Live Demos <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><path d="M4 6l4 4 4-4"/></svg></button>
+        <div class="dd-panel" id="demos-panel">
+          <a href="ai-agent.html" target="_blank" class="dd-a"><div class="dd-icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M8 12v2a4 4 0 008 0v-2"/><path d="M9 21h6M12 17v4"/></svg></div><div><div class="dd-t">AI Agent</div><div class="dd-d">Enterprise AI Assistant</div></div></a>
+          <a href="https://logichain.axiquantai.com" target="_blank" class="dd-a"><div class="dd-icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="5" height="10" rx="1"/><rect x="9.5" y="4" width="5" height="16" rx="1"/><rect x="17" y="7" width="5" height="10" rx="1"/></svg></div><div><div class="dd-t">LogiChain</div><div class="dd-d">Blockchain Supply Chain</div></div></a>
+        </div>
+      </li>
+      <li><a href="contact.html" class="nav-cta-btn">Get Started</a></li>
+    </ul>
+    <div class="theme-wrap">
+      <button class="t-btn" id="t-btn"><svg id="t-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><span id="t-lbl">Dark</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" width="10" height="10"><path d="M4 6l4 4 4-4"/></svg></button>
+      <div id="t-menu" style="display:none;position:absolute;top:calc(100% + 8px);right:0;min-width:135px;border-radius:12px;padding:.5rem;z-index:99999;backdrop-filter:blur(20px);">
+        <button class="t-pick active" data-p="dark" style="display:flex;align-items:center;gap:.6rem;width:100%;padding:.6rem .85rem;border:none;border-radius:8px;cursor:pointer;font-family:'Outfit',sans-serif;font-size:.875rem;font-weight:500;background:transparent;text-align:left;"><span style="width:10px;height:10px;border-radius:50%;background:#2a5bd7;display:inline-block;"></span>Dark</button>
+        <button class="t-pick" data-p="light" style="display:flex;align-items:center;gap:.6rem;width:100%;padding:.6rem .85rem;border:none;border-radius:8px;cursor:pointer;font-family:'Outfit',sans-serif;font-size:.875rem;font-weight:500;background:transparent;text-align:left;"><span style="width:10px;height:10px;border-radius:50%;background:#c9956a;display:inline-block;border:2px solid #e8c49a;"></span>Light</button>
+      </div>
+    </div>
+    <button class="mob-btn" id="mob-btn" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mob-menu" id="mob-menu">
+    <ul class="mob-ul">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+      <li><a href="services.html" style="color:var(--gold)!important;">Services</a></li><li><a href="careers.html">Careers</a></li>
+      <li><a href="ai-agent.html" target="_blank">AI Agent Demo</a></li>
+      <li><a href="https://logichain.axiquantai.com" target="_blank">LogiChain Demo</a></li>
+      <li><a href="contact.html" class="mob-cta">Get Started</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <div class="page-hero">
+    <div class="wrap">
+      <div class="s-label"><span class="s-dot"></span>What We Build</div>
+      <h1>Our <span class="gt">Services</span></h1>
+      <p>Comprehensive AI and data solutions tailored to your business needs</p>
+    </div>
+  </div>
+
+  <section class="section" style="padding-top:1rem;">
+    <div class="wrap">
+
+      <!-- AI & ML -->
+      <div class="svc-block reveal" id="ai-ml">
+        <div class="svc-block-header">
+          <div class="svc-block-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a10 10 0 110 20A10 10 0 0112 2z" stroke-opacity=".3"/><circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>
+          </div>
+          <div class="svc-block-title">
+            <h2>Artificial Intelligence &amp; <span class="gt">Machine Learning</span></h2>
+            <p>Transform your business with intelligent automation and predictive analytics</p>
+          </div>
+        </div>
+        <div class="svc-content-grid">
+          <div class="svc-desc-block">
+            <p>Transform your business with custom AI and machine learning solutions tailored to your unique challenges. We develop intelligent systems that automate processes, predict outcomes, and unlock insights from your data.</p>
+            <p style="margin-top:1rem;">From concept to production, we deliver AI solutions that drive real business value and competitive advantage. Our team of ML engineers and data scientists work closely with you to understand your challenges and build solutions that scale with your business.</p>
+          </div>
+          <div class="svc-features-block">
+            <ul class="feature-list">
+              <li>Predictive Analytics &amp; Forecasting</li>
+              <li>Natural Language Processing (NLP)</li>
+              <li>Computer Vision &amp; Image Recognition</li>
+              <li>Deep Learning &amp; Neural Networks</li>
+              <li>MLOps &amp; Model Deployment</li>
+              <li>Time Series Analysis</li>
+              <li>Fraud Detection &amp; Anomaly Detection</li>
             </ul>
+          </div>
+        </div>
+        <div class="sub-services">
+          <div class="sub-card"><h4>Machine Learning</h4><p>Intelligent systems that learn from data — classification, regression, clustering.</p></div>
+          <div class="sub-card"><h4>Deep Learning</h4><p>Neural networks for perception, understanding, and complex pattern recognition.</p></div>
+          <div class="sub-card"><h4>NLP &amp; LLMs</h4><p>Chatbots, sentiment analysis, translation, and large language model integration.</p></div>
+          <div class="sub-card"><h4>Computer Vision</h4><p>Object detection, facial recognition, OCR, and real-time video analytics.</p></div>
+        </div>
+      </div>
 
-            <!-- Theme Switcher -->
-            <div class="theme-switcher-header">
-                <button class="theme-btn" id="theme-toggle" aria-label="Change theme" title="Change theme">
-                    <span class="theme-icon">🎨</span>
-                </button>
-                <div class="theme-dropdown" id="theme-dropdown">
-                    <button class="theme-option" data-theme="dark"><span class="dot dark"></span>Dark</button>
-                    <button class="theme-option" data-theme="light"><span class="dot light"></span>Light</button>
-                    <button class="theme-option" data-theme="ocean"><span class="dot ocean"></span>Ocean</button>
-                    <button class="theme-option" data-theme="warm"><span class="dot warm"></span>Warm</button>
-                    <button class="theme-option" data-theme="midnight"><span class="dot midnight"></span>Midnight</button>
-                </div>
-            </div>
-
-            <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
-        </nav>
-        <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-            <ul class="mobile-nav-menu" role="menu">
-                <li role="none"><a href="index.html" class="mobile-nav-link" role="menuitem">Home</a></li>
-                <li role="none"><a href="about.html" class="mobile-nav-link" role="menuitem">About</a></li>
-                <li role="none"><a href="services.html" class="mobile-nav-link" role="menuitem">Services</a></li>
-                <li role="none"><a href="careers.html" class="mobile-nav-link" role="menuitem">Careers</a></li>
-                <li role="none"><a href="ai-agent.html" target="_blank" class="mobile-nav-link" role="menuitem">🤖 AI Agent Demo</a></li>
-                <li role="none"><a href="https://logichain.axiquantai.com" target="_blank" class="mobile-nav-link" role="menuitem">⛓️ LogiChain Demo</a></li>
-                <li role="none"><a href="contact.html" class="mobile-nav-link btn-primary" role="menuitem">Get Started</a></li>
+      <!-- Data Engineering -->
+      <div class="svc-block reveal d1" id="data-eng">
+        <div class="svc-block-header">
+          <div class="svc-block-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4.03 3-9 3S3 13.66 3 12"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <div class="svc-block-title">
+            <h2>Data Engineering &amp; <span class="gt">Pipeline Development</span></h2>
+            <p>Build scalable, reliable data infrastructure that powers your analytics and AI</p>
+          </div>
+        </div>
+        <div class="svc-content-grid">
+          <div class="svc-desc-block">
+            <p>Build robust, scalable data infrastructure that powers your analytics and AI initiatives. We design and implement end-to-end data pipelines that transform raw data into actionable insights.</p>
+            <p style="margin-top:1rem;">We ensure your data is clean, accessible, and ready for analysis — enabling faster, data-driven decision-making across your organization. Whether you're migrating to the cloud or building from scratch, we architect solutions that scale with your business.</p>
+          </div>
+          <div class="svc-features-block">
+            <ul class="feature-list">
+              <li>ETL/ELT Pipeline Development</li>
+              <li>Data Warehouse &amp; Data Lake Architecture</li>
+              <li>Real-time Streaming with Kafka &amp; Spark</li>
+              <li>Cloud Data Platform Setup (AWS/Azure/GCP)</li>
+              <li>Data Integration &amp; Migration</li>
+              <li>Data Quality &amp; Governance Frameworks</li>
             </ul>
+          </div>
         </div>
-    </header>
+      </div>
 
-    <main id="main-content" role="main">
-    <section class="page-hero">
-        <div class="container">
-            <h1>Our <span class="text-gradient">Services</span></h1>
-            <p>Comprehensive AI and data solutions tailored to your business needs</p>
+      <!-- Data Analytics -->
+      <div class="svc-block reveal" id="analytics">
+        <div class="svc-block-header">
+          <div class="svc-block-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <div class="svc-block-title">
+            <h2>Data Analytics &amp; <span class="gt">Business Intelligence</span></h2>
+            <p>Turn your data into strategic assets with advanced analytics</p>
+          </div>
         </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <!-- Service 1: AI & Machine Learning -->
-            <div class="service-detail">
-                <div class="service-header">
-                    <div class="service-icon-large">🤖</div>
-                    <div>
-                        <h2>Artificial Intelligence & Machine Learning Solutions</h2>
-                        <p class="text-secondary">Transform your business with intelligent automation and predictive analytics</p>
-                    </div>
-                </div>
-                <div class="service-description">
-                    <p>Transform your business with custom AI and machine learning solutions tailored to your unique challenges. We develop intelligent systems that automate processes, predict outcomes, and unlock insights from your data.</p>
-                    <p>From concept to production, we deliver AI solutions that drive real business value and competitive advantage. Our team of ML engineers and data scientists work closely with you to understand your challenges and build solutions that scale with your business.</p>
-                </div>
-                
-                <!-- Machine Learning Section -->
-                <h3 style="margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary); font-size: 1.5rem;">
-                    <span style="color: var(--primary-gold);">🧠</span> Machine Learning (ML)
-                </h3>
-                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
-                    Build intelligent systems that learn from data and improve over time without explicit programming.
-                </p>
-                
-                <!-- Deep Learning -->
-                <h4 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--primary-gold);">Deep Learning (DL)</h4>
-                <p style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.95rem;">
-                    Leverage neural networks with multiple layers to solve complex problems in perception and understanding.
-                </p>
-                
-                <!-- NLP Sub-section -->
-                <div style="margin-left: 1.5rem; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 2px solid var(--primary-gold);">
-                    <h5 style="color: var(--accent-blue); margin-bottom: 0.75rem; font-size: 1.1rem;">Natural Language Processing (NLP)</h5>
-                    <ul class="service-features">
-                        <li><strong>Text Classification:</strong> Categorize documents, emails, and content automatically with high accuracy</li>
-                        <li><strong>Sentiment Analysis:</strong> Understand customer emotions and opinions from reviews, social media, and feedback</li>
-                        <li><strong>Machine Translation:</strong> Build multi-language translation systems for global reach</li>
-                        <li><strong>Chatbots & LLMs:</strong> Develop conversational AI assistants powered by large language models</li>
-                        <li><strong>Speech Recognition:</strong> Convert spoken language to text with advanced ASR systems</li>
-                    </ul>
-                </div>
-                
-                <!-- Computer Vision Sub-section -->
-                <div style="margin-left: 1.5rem; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 2px solid var(--primary-gold);">
-                    <h5 style="color: var(--accent-blue); margin-bottom: 0.75rem; font-size: 1.1rem;">Computer Vision (CV)</h5>
-                    <ul class="service-features">
-                        <li><strong>Image Classification:</strong> Automatically categorize and tag images at scale</li>
-                        <li><strong>Object Detection:</strong> Identify and locate objects within images and videos</li>
-                        <li><strong>Facial Recognition:</strong> Build secure authentication and identification systems</li>
-                        <li><strong>Video Analytics:</strong> Extract insights from video streams in real-time</li>
-                        <li><strong>OCR & Document Processing:</strong> Extract text and data from scanned documents and images</li>
-                    </ul>
-                </div>
-                
-                <!-- Traditional ML -->
-                <h4 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--primary-gold);">Traditional Machine Learning</h4>
-                <p style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.95rem;">
-                    Classical ML algorithms for structured data analysis, prediction, and pattern recognition.
-                </p>
-                <div style="margin-left: 1.5rem; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 2px solid var(--primary-gold);">
-                    <ul class="service-features">
-                        <li><strong>Regression:</strong> Predict continuous values like sales forecasting, price prediction, and demand estimation</li>
-                        <li><strong>Classification:</strong> Categorize data into predefined classes for fraud detection, customer segmentation, and risk assessment</li>
-                        <li><strong>Clustering:</strong> Discover natural groupings in data for market segmentation, anomaly detection, and pattern discovery</li>
-                        <li><strong>Time Series Analysis:</strong> Analyze temporal data for forecasting, trend detection, and seasonality patterns</li>
-                    </ul>
-                </div>
-                
-                <!-- Rule-based AI Section -->
-                <h3 style="margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary); font-size: 1.5rem;">
-                    <span style="color: var(--primary-gold);">⚙️</span> Rule-based AI
-                </h3>
-                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
-                    Deterministic AI systems based on predefined rules and logic for explainable and auditable decisions.
-                </p>
-                
-                <div style="margin-left: 1.5rem; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 2px solid var(--primary-gold);">
-                    <h5 style="color: var(--accent-blue); margin-bottom: 0.75rem; font-size: 1.1rem;">Rule-based NLP</h5>
-                    <ul class="service-features">
-                        <li><strong>Pattern Matching:</strong> Extract structured information using regex and linguistic patterns</li>
-                        <li><strong>Named Entity Recognition:</strong> Identify entities like names, dates, and locations with rule-based systems</li>
-                        <li><strong>Text Parsing:</strong> Parse and structure unstructured text using grammar rules</li>
-                    </ul>
-                </div>
-                
-                <div style="margin-left: 1.5rem; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 2px solid var(--primary-gold);">
-                    <h5 style="color: var(--accent-blue); margin-bottom: 0.75rem; font-size: 1.1rem;">Expert Systems</h5>
-                    <ul class="service-features">
-                        <li><strong>Decision Support Systems:</strong> Build knowledge-based systems that mimic human expert decision-making</li>
-                        <li><strong>Business Rules Engines:</strong> Implement configurable rule engines for automated business logic</li>
-                        <li><strong>Diagnostic Systems:</strong> Create systems for troubleshooting and problem diagnosis</li>
-                    </ul>
-                </div>
-                
-                <!-- ML Operations -->
-                <h3 style="margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary); font-size: 1.5rem;">
-                    <span style="color: var(--primary-gold);">🚀</span> MLOps & Deployment
-                </h3>
-                <ul class="service-features">
-                    <li><strong>Model Training & Optimization:</strong> Design, train, and fine-tune models for maximum accuracy and performance</li>
-                    <li><strong>Model Deployment:</strong> Deploy models to production with containerization (Docker, Kubernetes)</li>
-                    <li><strong>Model Monitoring:</strong> Track model performance, data drift, and accuracy over time</li>
-                    <li><strong>CI/CD for ML:</strong> Implement continuous integration and deployment pipelines for ML workflows</li>
-                    <li><strong>Model Versioning:</strong> Manage model versions and experiments with MLflow, DVC, or similar tools</li>
-                </ul>
-            </div>
-
-            <!-- Service 2: Data Engineering -->
-            <div class="service-detail">
-                <div class="service-header">
-                    <div class="service-icon-large">🔧</div>
-                    <div>
-                        <h2>Data Engineering & Pipeline Development</h2>
-                        <p class="text-secondary">Build scalable, reliable data infrastructure that powers your analytics and AI</p>
-                    </div>
-                </div>
-                <div class="service-description">
-                    <p>Build robust, scalable data infrastructure that powers your analytics and AI initiatives. We design and implement end-to-end data pipelines that transform raw data into actionable insights.</p>
-                    <p>We ensure your data is clean, accessible, and ready for analysis—enabling faster, data-driven decision-making across your organization. Whether you're migrating to the cloud or building from scratch, we architect solutions that scale with your business.</p>
-                </div>
-                <h4 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--primary-gold);">Data Engineering Services:</h4>
-                <ul class="service-features">
-                    <li><strong>ETL/ELT Pipeline Development:</strong> Design and build efficient data pipelines that extract, transform, and load data at scale</li>
-                    <li><strong>Data Warehouse & Data Lake Architecture:</strong> Build modern data platforms on Snowflake, BigQuery, Redshift, or Databricks</li>
-                    <li><strong>Real-time Data Processing:</strong> Process streaming data with Apache Kafka, Spark Streaming, and Flink for real-time insights</li>
-                    <li><strong>Cloud Data Platform Setup:</strong> Migrate and optimize data infrastructure on AWS, Azure, or Google Cloud Platform</li>
-                    <li><strong>Data Integration & Migration:</strong> Connect disparate data sources and migrate legacy systems to modern platforms</li>
-                    <li><strong>Data Quality & Governance:</strong> Implement data quality checks, lineage tracking, and governance frameworks</li>
-                </ul>
-            </div>
-
-            <!-- Service 3: Data Analytics -->
-            <div class="service-detail">
-                <div class="service-header">
-                    <div class="service-icon-large">📊</div>
-                    <div>
-                        <h2>Data Analytics & Business Intelligence</h2>
-                        <p class="text-secondary">Turn your data into strategic assets with advanced analytics</p>
-                    </div>
-                </div>
-                <div class="service-description">
-                    <p>Turn your data into strategic assets with advanced analytics and visualization solutions. We help organizations uncover patterns, identify opportunities, and make informed decisions backed by data.</p>
-                    <p>Empower your teams with insights that drive growth, efficiency, and competitive advantage. We don't just build dashboards—we partner with you to understand your business objectives and create analytics solutions that answer your most important questions.</p>
-                </div>
-                <h4 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--primary-gold);">Analytics Capabilities:</h4>
-                <ul class="service-features">
-                    <li><strong>Interactive Dashboards & Reporting:</strong> Build stunning visualizations with Tableau, Power BI, Looker, or custom solutions</li>
-                    <li><strong>Advanced Statistical Analysis:</strong> Apply statistical methods to uncover trends, correlations, and causation in your data</li>
-                    <li><strong>Customer Behavior & Segmentation:</strong> Understand your customers better with cohort analysis, RFM modeling, and segmentation</li>
-                    <li><strong>KPI Tracking & Performance Monitoring:</strong> Track business metrics in real-time with automated alerts and anomaly detection</li>
-                    <li><strong>Data-Driven Strategy Consulting:</strong> Work with our analysts to develop data strategies that align with business goals</li>
-                    <li><strong>Self-Service Analytics:</strong> Empower your teams to explore data independently with user-friendly analytics tools</li>
-                </ul>
-            </div>
-
-            <!-- Service 4: Blockchain Development -->
-            <div class="service-detail">
-                <div class="service-header">
-                    <div class="service-icon-large">⛓️</div>
-                    <div>
-                        <h2>Blockchain & Web3 Solutions</h2>
-                        <p class="text-secondary">Secure, transparent blockchain solutions for decentralized applications</p>
-                    </div>
-                </div>
-                <div class="service-description">
-                    <p>Leverage blockchain technology to build secure, transparent, and decentralized applications. We develop innovative blockchain solutions that enhance trust, reduce costs, and create new business models.</p>
-                    <p>Whether you're exploring Web3 opportunities or building enterprise blockchain solutions, we bring technical excellence and strategic guidance to help you navigate this transformative technology.</p>
-                </div>
-                <h4 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--primary-gold);">Blockchain Expertise:</h4>
-                <ul class="service-features">
-                    <li><strong>Smart Contract Development:</strong> Build secure, audited smart contracts in Solidity (Ethereum), Rust (Solana), or other languages</li>
-                    <li><strong>DApp Architecture & Development:</strong> Design and develop decentralized applications with modern Web3 frameworks</li>
-                    <li><strong>NFT Platform Development:</strong> Create NFT marketplaces, minting platforms, and digital collectible ecosystems</li>
-                    <li><strong>Tokenization & Cryptocurrency:</strong> Develop custom tokens, tokenomics, and cryptocurrency solutions</li>
-                    <li><strong>Blockchain Integration:</strong> Connect blockchain technology with existing enterprise systems and databases</li>
-                    <li><strong>Private & Public Blockchain:</strong> Implement Hyperledger, Polygon, Ethereum, or other blockchain networks</li>
-                </ul>
-                <!-- LogiChain Live Demo -->
-                <div style="margin-top: 2rem; padding: 1.5rem; background: var(--card-bg); border: 1px solid rgba(16,185,129,0.3); border-radius: 12px;">
-                    <h4 style="color: #10b981; margin-bottom: 0.5rem;">⛓️ Live Demo — LogiChain</h4>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">
-                        See our blockchain expertise in action. LogiChain is a real-world supply chain traceability platform built on Ethereum — track products from manufacturer to customer with full transparency.
-                    </p>
-                    <a href="https://logichain.axiquantai.com" target="_blank" class="btn btn-primary">
-                        🚀 Try Live Demo →
-                    </a>
-                </div>
-            </div>
-
-            <!-- Service 5: Generative AI -->
-            <div class="service-detail">
-                <div class="service-header">
-                    <div class="service-icon-large">✨</div>
-                    <div>
-                        <h2>Generative AI & LLM Solutions</h2>
-                        <p class="text-secondary">Harness the power of generative AI to transform your operations</p>
-                    </div>
-                </div>
-                <div class="service-description">
-                    <p>Harness the power of generative AI to automate content creation, enhance customer experiences, and unlock new capabilities. We integrate cutting-edge large language models (LLMs) into your workflows.</p>
-                    <p>Transform how your organization creates, communicates, and operates with intelligent AI systems. From customer-facing chatbots to internal automation, we build generative AI solutions that deliver measurable ROI.</p>
-                </div>
-                <h4 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--primary-gold);">Generative AI Services:</h4>
-                <ul class="service-features">
-                    <li><strong>LLM Integration:</strong> Integrate GPT-4, Claude, Gemini, Llama, or other language models into your applications</li>
-                    <li><strong>Custom Chatbot Development:</strong> Build intelligent AI assistants that handle customer support, sales, and internal queries</li>
-                    <li><strong>Fine-tuning & Customization:</strong> Adapt foundation models to your domain-specific data and use cases</li>
-                    <li><strong>AI-Powered Content Generation:</strong> Automate content creation for marketing, documentation, and communication</li>
-                    <li><strong>Document Processing & Summarization:</strong> Extract insights from documents, contracts, and reports automatically</li>
-                    <li><strong>RAG (Retrieval-Augmented Generation):</strong> Build AI systems that access your proprietary knowledge bases for accurate responses</li>
-                </ul>
-            </div>
-
-            <!-- Service 6: Data Visualization -->
-            <div class="service-detail">
-                <div class="service-header">
-                    <div class="service-icon-large">📈</div>
-                    <div>
-                        <h2>Data Visualization & Dashboards</h2>
-                        <p class="text-secondary">Beautiful visualizations that make complex data easy to understand</p>
-                    </div>
-                </div>
-                <div class="service-description">
-                    <p>Make complex data easy to understand with beautiful, interactive visualizations. We create custom dashboards and visual analytics that tell your data's story and drive action.</p>
-                    <p>Transform raw numbers into compelling visual narratives that engage stakeholders and accelerate decision-making. Whether you need executive dashboards or embedded analytics, we design visualizations that resonate with your audience.</p>
-                </div>
-                <h4 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--primary-gold);">Visualization Services:</h4>
-                <ul class="service-features">
-                    <li><strong>Executive & Operational Dashboards:</strong> Build role-specific dashboards that surface the right metrics for each stakeholder</li>
-                    <li><strong>Real-time Data Visualization:</strong> Display live data with automatic updates and real-time refresh capabilities</li>
-                    <li><strong>Custom D3.js Solutions:</strong> Create bespoke, interactive visualizations that go beyond standard charts</li>
-                    <li><strong>Tableau & Power BI Development:</strong> Design and deploy enterprise BI dashboards with best-in-class tools</li>
-                    <li><strong>Mobile-Responsive Analytics:</strong> Ensure dashboards work seamlessly across desktop, tablet, and mobile devices</li>
-                    <li><strong>Embedded Analytics:</strong> Integrate analytics and visualizations directly into your applications</li>
-                </ul>
-            </div>
-
-            <!-- Service 7: Agentic AI Platform -->
-            <div class="service-detail">
-                <div class="service-header">
-                    <div class="service-icon-large">🧠</div>
-                    <div>
-                        <h2>Agentic AI Platform</h2>
-                        <p class="text-secondary">Multi-domain AI agent for enterprise intelligence and decision support</p>
-                    </div>
-                </div>
-                <div class="service-description">
-                    <p>Our Agentic AI Platform is a production-grade multi-agent system that combines research, analysis, and execution intelligence. Built on LangChain and Groq LLMs, it delivers expert-level insights across six industry domains in seconds.</p>
-                    <p>Unlike static chatbots, our agent autonomously breaks down complex business questions, researches answers using live web data, and synthesizes actionable recommendations — all in one response.</p>
-                </div>
-                <h4 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--primary-gold);">Platform Capabilities:</h4>
-                <ul class="service-features">
-                    <li><strong>Multi-Agent Orchestration:</strong> Specialized Research, Analyst, and Executor agents working in parallel</li>
-                    <li><strong>6 Industry Domains:</strong> Retail, Pharma, Manufacturing, Real Estate, Automotive, and Energy</li>
-                    <li><strong>Real-time Web Research:</strong> Live DuckDuckGo search integration for up-to-date insights</li>
-                    <li><strong>Enterprise Q&A:</strong> ETL pipelines, KPI frameworks, forecasting models, compliance guidance</li>
-                    <li><strong>Groq LLM Powered:</strong> Ultra-fast inference using Llama 3.3 70B for production-grade responses</li>
-                    <li><strong>API Ready:</strong> FastAPI backend deployable on any cloud platform</li>
-                </ul>
-                <div style="margin-top: 2rem;">
-                    <a href="ai-agent.html" target="_blank" class="btn btn-primary">Try Live Demo →</a>
-                </div>
-            </div>
+        <div class="svc-content-grid">
+          <div class="svc-desc-block">
+            <p>Turn your data into strategic assets with advanced analytics and visualization solutions. We help organizations uncover patterns, identify opportunities, and make informed decisions backed by data.</p>
+            <p style="margin-top:1rem;">Empower your teams with insights that drive growth, efficiency, and competitive advantage. We don't just build dashboards — we partner with you to understand your business objectives and create analytics solutions that answer your most important questions.</p>
+          </div>
+          <div class="svc-features-block">
+            <ul class="feature-list">
+              <li>Interactive Dashboards &amp; Reporting</li>
+              <li>Advanced Statistical Analysis</li>
+              <li>Customer Behaviour &amp; Segmentation</li>
+              <li>KPI Tracking &amp; Performance Monitoring</li>
+              <li>Data-Driven Strategy Consulting</li>
+              <li>Self-Service Analytics Platforms</li>
+            </ul>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <section class="section" style="background: linear-gradient(135deg, var(--primary-navy) 0%, var(--accent-blue) 100%); text-align: center;">
-        <div class="container">
-            <h2 style="color: white;">Need a Custom Solution?</h2>
-            <p style="color: rgba(255,255,255,0.9); margin: 1rem 0 2rem;">Let's discuss your specific requirements and build something tailored for you</p>
-            <a href="contact.html" class="btn btn-primary">Get in Touch →</a>
+      <!-- Blockchain -->
+      <div class="svc-block reveal d1" id="blockchain">
+        <div class="svc-block-header">
+          <div class="svc-block-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="svc-block-title">
+            <h2>Blockchain &amp; <span class="gt">Web3 Solutions</span></h2>
+            <p>Secure, transparent blockchain solutions for decentralized applications</p>
+          </div>
         </div>
-    </section>
-
-    </main>
-
-    <footer role="contentinfo">
-        <div class="container">
-            <div class="footer-grid">
-                <div><div class="logo mb-1"><span class="text-gradient">AXI</span>QUANT<span class="logo-ai">AI</span></div></div>
-                <div><h4 class="footer-title">Quick Links</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="careers.html">Careers</a></li></ul></div>
-                <div><h4 class="footer-title">Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="services.html">AI & Machine Learning</a></li>
-                        <li><a href="services.html">Data Engineering</a></li>
-                        <li><a href="services.html">Data Analytics</a></li>
-                        <li><a href="services.html">Blockchain</a></li>
-                        <li><a href="services.html">Generative AI</a></li>
-                        <li><a href="services.html">Data Visualization</a></li>
-                        <li><a href="services.html">AI Agents</a></li>
-                    </ul></div>
-                <div><h4 class="footer-title">Contact</h4><p style="color: var(--text-secondary);"><span aria-label="Email">📧</span> info@axiquantai.com</p></div>
-            </div>
-            <div class="footer-bottom"><p>&copy; 2026 AxiQuant AI. All rights reserved.</p></div>
-            <nav aria-label="Social media links">
-            <div class="social-links">
-                <a href="https://www.linkedin.com/company/axiquant-ai" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
-                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                </a>
-            </div>
-            </nav>
+        <div class="svc-content-grid">
+          <div class="svc-desc-block">
+            <p>Leverage blockchain technology to build secure, transparent, and decentralized applications. We develop innovative blockchain solutions that enhance trust, reduce costs, and create new business models.</p>
+            <p style="margin-top:1rem;">Whether you're exploring Web3 opportunities or building enterprise blockchain solutions, we bring technical excellence and strategic guidance to help you navigate this transformative technology.</p>
+          </div>
+          <div class="svc-features-block">
+            <ul class="feature-list">
+              <li>Smart Contract Development (Solidity, Rust)</li>
+              <li>DApp Architecture &amp; Development</li>
+              <li>NFT Platform Development</li>
+              <li>Tokenization &amp; Cryptocurrency Solutions</li>
+              <li>Blockchain Integration with Enterprise Systems</li>
+              <li>Hyperledger, Polygon, Ethereum Networks</li>
+            </ul>
+          </div>
         </div>
-    </footer>
+        <div style="margin-top:1.5rem;">
+          <p style="font-size:.9rem;font-weight:600;margin-bottom:.75rem;">See our blockchain expertise in action:</p>
+          <a href="https://logichain.axiquantai.com" target="_blank" class="demo-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Try LogiChain Live Demo
+          </a>
+        </div>
+      </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script src="js/main.js"></script>
+      <!-- Generative AI -->
+      <div class="svc-block reveal" id="gen-ai">
+        <div class="svc-block-header">
+          <div class="svc-block-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <div class="svc-block-title">
+            <h2>Generative AI &amp; <span class="gt">LLM Solutions</span></h2>
+            <p>Harness the power of generative AI to transform your operations</p>
+          </div>
+        </div>
+        <div class="svc-content-grid">
+          <div class="svc-desc-block">
+            <p>Harness the power of generative AI to automate content creation, enhance customer experiences, and unlock new capabilities. We integrate cutting-edge large language models (LLMs) into your workflows.</p>
+            <p style="margin-top:1rem;">Transform how your organization creates, communicates, and operates with intelligent AI systems. From customer-facing chatbots to internal automation, we build generative AI solutions that deliver measurable ROI.</p>
+          </div>
+          <div class="svc-features-block">
+            <ul class="feature-list">
+              <li>LLM Integration (GPT-4, Claude, Gemini, Llama)</li>
+              <li>Custom Chatbot Development</li>
+              <li>Fine-tuning &amp; Domain Customization</li>
+              <li>AI-Powered Content Generation</li>
+              <li>Document Processing &amp; Summarization</li>
+              <li>RAG (Retrieval-Augmented Generation)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Visualization -->
+      <div class="svc-block reveal d1" id="dataviz">
+        <div class="svc-block-header">
+          <div class="svc-block-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h3M7 12h10"/></svg>
+          </div>
+          <div class="svc-block-title">
+            <h2>Data Visualization &amp; <span class="gt">Dashboards</span></h2>
+            <p>Beautiful visualizations that make complex data easy to understand</p>
+          </div>
+        </div>
+        <div class="svc-content-grid">
+          <div class="svc-desc-block">
+            <p>Make complex data easy to understand with beautiful, interactive visualizations. We create custom dashboards and visual analytics that tell your data's story and drive action.</p>
+            <p style="margin-top:1rem;">Transform raw numbers into compelling visual narratives that engage stakeholders and accelerate decision-making. Whether you need executive dashboards or embedded analytics, we design visualizations that resonate with your audience.</p>
+          </div>
+          <div class="svc-features-block">
+            <ul class="feature-list">
+              <li>Executive &amp; Operational Dashboards</li>
+              <li>Real-time Data Visualization</li>
+              <li>Custom D3.js Interactive Solutions</li>
+              <li>Tableau &amp; Power BI Development</li>
+              <li>Mobile-Responsive Analytics</li>
+              <li>Embedded Analytics Integration</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Agentic AI -->
+      <div class="svc-block reveal" id="agentic">
+        <div class="svc-block-header">
+          <div class="svc-block-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/><path d="M16.24 7.76a6 6 0 010 8.49M7.76 7.76a6 6 0 000 8.49"/></svg>
+          </div>
+          <div class="svc-block-title">
+            <h2>Agentic AI <span class="gt">Platform</span></h2>
+            <p>Multi-domain AI agent for enterprise intelligence and decision support</p>
+          </div>
+        </div>
+        <div class="svc-content-grid">
+          <div class="svc-desc-block">
+            <p>Our Agentic AI Platform is a production-grade multi-agent system that combines research, analysis, and execution intelligence. Built on LangChain and Groq LLMs, it delivers expert-level insights across six industry domains in seconds.</p>
+            <p style="margin-top:1rem;">Unlike static chatbots, our agent autonomously breaks down complex business questions, researches answers using live web data, and synthesizes actionable recommendations — all in one response.</p>
+          </div>
+          <div class="svc-features-block">
+            <ul class="feature-list">
+              <li>Multi-Agent Orchestration (Research, Analyst, Executor)</li>
+              <li>6 Industry Domains (Retail, Pharma, Manufacturing…)</li>
+              <li>Real-time Web Research Integration</li>
+              <li>Enterprise Q&amp;A &amp; KPI Frameworks</li>
+              <li>Groq LLM Powered (Llama 3.3 70B)</li>
+              <li>FastAPI Backend — Cloud Ready</li>
+            </ul>
+          </div>
+        </div>
+        <div style="margin-top:1.5rem;">
+          <a href="ai-agent.html" target="_blank" class="demo-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Try AI Agent Live Demo
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band reveal">
+    <div class="wrap">
+      <div class="s-label" style="margin:0 auto 1.25rem;">Custom Solutions</div>
+      <h2>Need a Custom Solution?</h2>
+      <p style="max-width:500px;margin:.9rem auto 2.25rem;font-size:1rem;">Let's discuss your specific requirements and build something tailored for you</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="contact.html" class="btn-primary">Get in Touch <svg viewBox="0 0 20 20" fill="currentColor" width="15" height="15"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></a>
+        <a href="about.html" class="btn-outline">About Us</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer role="contentinfo">
+  <div class="wrap">
+    <div class="footer-g">
+      <div><img src="logo.png" alt="AxiQuant AI" class="footer-logo" style="height:34px;width:auto;display:block;margin-bottom:.75rem;"><p class="footer-tag">Powering Decisions with Engineered Intelligence</p><p class="footer-desc">Building secure, intelligent data platforms at the intersection of AI, data engineering, and blockchain technology.</p><div style="display:flex;gap:.55rem;margin-top:.75rem;"><a href="https://www.linkedin.com/company/axiquant-ai" target="_blank" rel="noopener noreferrer" class="soc-a" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div></div>
+      <div><div class="footer-h">Quick Links</div><ul class="footer-ul"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="careers.html">Careers</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><div class="footer-h">Services</div><ul class="footer-ul"><li><a href="#ai-ml">AI & Machine Learning</a></li><li><a href="#data-eng">Data Engineering</a></li><li><a href="#analytics">Data Analytics</a></li><li><a href="#blockchain">Blockchain</a></li><li><a href="#gen-ai">Generative AI</a></li><li><a href="#dataviz">Data Visualization</a></li><li><a href="#agentic">AI Agents</a></li></ul></div>
+      <div><div class="footer-h">Get in Touch</div><address class="footer-addr"><a href="mailto:info@axiquantai.com">info@axiquantai.com</a><br>Surat, Gujarat, India</address><a href="contact.html" class="btn-primary" style="font-size:.84rem;padding:.65rem 1.4rem;">Start a Project</a></div>
+    </div>
+    <div class="footer-bot"><p class="footer-copy">© 2026 AxiQuant AI. All rights reserved.</p><nav class="footer-leg"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-service.html">Terms of Service</a></nav></div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="https://cdn.emailjs.com/sdk-3.5.0.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function(){
+  var DARK={'--primary-navy':'#0c1228','--primary-gold':'#c9956a','--accent-blue':'#2a5bd7','--accent-teal':'#4a7af5','--text-primary':'#eef2ff','--text-secondary':'#8899bb','--text-tertiary':'#445577','--bg-primary':'#080d1a','--bg-secondary':'#0c1228','--bg-card':'rgba(255,255,255,0.04)','--border-color':'rgba(255,255,255,0.07)','--border-hover':'rgba(201,149,106,0.28)'};
+  var LIGHT={'--primary-navy':'#1a2d6b','--primary-gold':'#b07840','--accent-blue':'#1a2d6b','--accent-teal':'#2a5bd7','--text-primary':'#0d1733','--text-secondary':'#334477','--text-tertiary':'#8899bb','--bg-primary':'#f4f6fb','--bg-secondary':'#eaecf5','--bg-card':'rgba(255,255,255,0.85)','--border-color':'rgba(26,45,107,0.10)','--border-hover':'rgba(201,149,106,0.35)'};
+  var menu=document.getElementById('t-menu'),btn=document.getElementById('t-btn'),open=false;
+  function styleMenu(show){open=show;var dark=document.documentElement.getAttribute('data-theme')!=='light';menu.style.display=show?'block':'none';menu.style.background=dark?'rgba(8,13,26,0.97)':'rgba(255,255,255,0.99)';menu.style.border=dark?'1px solid rgba(255,255,255,0.10)':'1px solid rgba(201,149,106,0.28)';menu.style.boxShadow='0 12px 40px rgba(0,0,0,0.3)';menu.querySelectorAll('.t-pick').forEach(function(b){b.style.color=dark?'#eef2ff':'#0d1733';});}
+  function applyTheme(name){var vars=name==='light'?LIGHT:DARK;var root=document.documentElement;root.setAttribute('data-theme',name);Object.keys(vars).forEach(function(k){root.style.setProperty(k,vars[k]);});localStorage.setItem('axq-theme',name);var icon=document.getElementById('t-icon'),lbl=document.getElementById('t-lbl');if(name==='light'){if(icon)icon.innerHTML='<circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>';if(lbl)lbl.textContent='Light';}else{if(icon)icon.innerHTML='<path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>';if(lbl)lbl.textContent='Dark';}menu.querySelectorAll('.t-pick').forEach(function(b){b.style.color=(document.documentElement.getAttribute('data-theme')!=='light')?'#eef2ff':'#0d1733';b.classList.toggle('active',b.getAttribute('data-p')===name);if(b.classList.contains('active'))b.style.color=name==='dark'?'#c9956a':'#b07840';});if(open)styleMenu(true);}
+  applyTheme(localStorage.getItem('axq-theme')||'dark');
+  document.addEventListener('DOMContentLoaded',function(){
+    ['ocean','warm','midnight'].forEach(function(t){document.querySelectorAll('.theme-option[data-theme="'+t+'"]').forEach(function(el){el.remove();});});
+    btn.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();styleMenu(!open);});
+    document.addEventListener('click',function(e){if(open&&!menu.contains(e.target)&&e.target!==btn)styleMenu(false);});
+    menu.addEventListener('click',function(e){e.stopPropagation();});
+    menu.querySelectorAll('.t-pick').forEach(function(b){b.addEventListener('click',function(e){e.stopPropagation();applyTheme(b.getAttribute('data-p'));styleMenu(false);});});
+    var dBtn=document.getElementById('demos-btn'),dP=document.getElementById('demos-panel');
+    if(dBtn&&dP){dBtn.addEventListener('click',function(e){e.stopPropagation();var o=dP.classList.toggle('open');dBtn.setAttribute('aria-expanded',o);});document.addEventListener('click',function(){dP.classList.remove('open');});dP.addEventListener('click',function(e){e.stopPropagation();});}
+    var mb=document.getElementById('mob-btn'),mm=document.getElementById('mob-menu');
+    if(mb&&mm){mb.addEventListener('click',function(){var o=mm.classList.toggle('open');mb.setAttribute('aria-expanded',o);});}
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  });
+})();
+</script>
 </body>
 </html>
