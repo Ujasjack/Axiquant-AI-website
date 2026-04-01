@@ -20,6 +20,7 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/pages.css">
 <link rel="stylesheet" href="css/theme-fix.css">
+<link rel="stylesheet" href="css/size-boost.css">
 <script>(function(){var t=localStorage.getItem('axq-theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
 <style>
 /* ── DESIGN SYSTEM (matches index.html exactly) ── */
@@ -52,6 +53,11 @@ header{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--nav-bg)
 .nav-ul a:hover,.nav-ul button:hover{color:var(--t1)!important;background:var(--surface);}
 .nav-cta-btn{background:var(--blue)!important;color:#fff!important;border-radius:8px!important;padding:.5rem 1.25rem!important;font-weight:600!important;transition:background .2s,transform .15s,box-shadow .2s!important;}
 .nav-cta-btn:hover{background:var(--blue2)!important;transform:translateY(-1px);box-shadow:0 6px 20px var(--glow-blue)!important;}
+
+html[data-theme="light"] .nav-cta-btn{background:#1a2d6b!important;color:#fff!important;box-shadow:0 4px 16px rgba(26,45,107,0.25)!important;}
+html[data-theme="light"] .nav-cta-btn:hover{background:#2a5bd7!important;box-shadow:0 6px 24px rgba(42,91,215,0.35)!important;}
+html[data-theme="light"] .mob-cta{background:#1a2d6b!important;color:#fff!important;}
+
 
 /* Demos dropdown */
 .dd-wrap{position:relative;}

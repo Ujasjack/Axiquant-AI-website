@@ -1,0 +1,155 @@
+/* size-boost.css — Increases text, icon, and element sizes */
+
+.nav-ul a,
+.nav-ul button {
+  font-size: 1rem !important;
+  padding: 0.55rem 1.1rem !important;
+}
+.nav-cta-btn {
+  padding: 0.6rem 1.5rem !important;
+  font-size: 0.95rem !important;
+}
+.logo-a img {
+  height: 44px !important;
+}
+h1 {
+  font-size: clamp(2.8rem, 5.5vw, 4.8rem) !important;
+}
+h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem) !important;
+}
+h3 {
+  font-size: 1.25rem !important;
+}
+h4 {
+  font-size: 1.1rem !important;
+}
+body {
+  font-size: 1.05rem !important;
+}
+p {
+  font-size: 1.05rem !important;
+  line-height: 1.85 !important;
+}
+.hero-p, .hero-subtitle {
+  font-size: 1.15rem !important;
+}
+.btn-primary, .btn-outline, .btn {
+  padding: 0.95rem 2.4rem !important;
+  font-size: 1.05rem !important;
+}
+.svc-card {
+  padding: 2.5rem !important;
+}
+.svc-ico {
+  width: 56px !important;
+  height: 56px !important;
+}
+.svc-ico svg {
+  width: 26px !important;
+  height: 26px !important;
+}
+.svc-title {
+  font-size: 1.2rem !important;
+}
+.svc-desc {
+  font-size: 0.95rem !important;
+}
+.svc-list li {
+  font-size: 0.9rem !important;
+}
+.svc-link {
+  font-size: 0.88rem !important;
+}
+.metric-icon {
+  width: 50px !important;
+  height: 50px !important;
+}
+.metric-icon svg {
+  width: 22px !important;
+  height: 22px !important;
+}
+.metric-val {
+  font-size: 2rem !important;
+}
+.metric-lbl {
+  font-size: 0.82rem !important;
+}
+.fc-val {
+  font-size: 1.15rem !important;
+}
+.fc-lbl {
+  font-size: 0.76rem !important;
+}
+.dd-panel {
+  min-width: 260px !important;
+}
+.dd-icon-box {
+  width: 40px !important;
+  height: 40px !important;
+}
+.dd-icon-box svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+.dd-t {
+  font-size: 0.95rem !important;
+}
+.dd-d {
+  font-size: 0.8rem !important;
+}
+.s-label, .hero-pill {
+  font-size: 0.76rem !important;
+  padding: 0.4rem 1.1rem !important;
+}
+.footer-title, footer h4 {
+  font-size: 1.1rem !important;
+}
+footer p, .footer-links a, footer a {
+  font-size: 0.95rem !important;
+}
+.t-btn {
+  font-size: 0.9rem !important;
+}
+.t-btn svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+.mob-ul a {
+  font-size: 1.1rem !important;
+  padding: 0.75rem 1rem !important;
+}
+.service-icon {
+  font-size: 3.5rem !important;
+}
+.service-title {
+  font-size: 1.7rem !important;
+}
+.service-features li {
+  font-size: 1rem !important;
+}
+.page-hero h1 {
+  font-size: clamp(2.5rem, 5vw, 3.8rem) !important;
+}
+.info-icon {
+  font-size: 2.4rem !important;
+}
+.benefit-icon, .value-icon, .mission-icon {
+  font-size: 3.5rem !important;
+}
+.stat-value {
+  font-size: 2.8rem !important;
+}
+.stat-label {
+  font-size: 0.95rem !important;
+}
+.nav-link {
+  font-size: 1rem !important;
+}
+.mobile-nav-link {
+  font-size: 1.35rem !important;
+}
+.btn-nav {
+  padding: 0.85rem 2rem !important;
+  font-size: 1rem !important;
+}
